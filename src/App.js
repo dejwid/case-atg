@@ -13,7 +13,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [betType, setBetType] = useState(betTypes?.[0]);
   useEffect(() => {
-    console.log(betType);
     setIsLoading(true);
     axios.get('products/'+betType).then(async (result) => {
       await fakeWait(500);
